@@ -1,0 +1,126 @@
+html{
+	box-shadow: border-box;
+}
+*,
+*::before
+*::after{
+	box-shadow: inherit;
+}
+body{
+	font-family: 'Arial',sans-serif;
+}
+.container{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	/*border:1px solid red;*/
+	background-color: yellow;
+	display: flex;
+	position: relative;
+	padding: 0;
+	justify-content: space-around;
+}
+.vice{
+	position: absolute;
+	margin: 0;
+	top: -5px;
+	left: 60px;
+	
+	transform: rotate(-20deg);
+}
+.icons{
+	width: 180px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.nav-items-list{
+	display: flex;
+	width: 600px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-left: 230px;
+
+}
+.nav-item> a{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: yellow;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	
+}
+.nav-item> a::after{
+	display: inline-block;
+	content: "";
+	position: absolute;
+	border-width: 5px;
+	border-style: solid;
+	transform: rotate(-90deg);
+	border-color:  black transparent transparent transparent;
+	top: 15px;
+	right: 0px;
+	transition: transform 0.5s ease;
+}
+.nav-item{
+	position: relative;
+	width: 85px;
+	
+}
+.drop-down-about {
+	position: absolute;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	top: 100%;
+	width: 100%;
+}
+
+.drop-down-item a{
+	text-decoration: none;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	color:transparent;
+	text-align: center;
+	padding: 0px;
+	transform: rotate(90deg);
+	background-color: transparent;
+	width: transparent;
+	transition:padding 0.5s ease,
+			   font-size 0.2s ease,
+			   background-color 0.5s ease,
+			   transform 1s ease,
+			   color 0.2s ease 0.5s;
+}
+.drop-down-item{
+	width: 100%;
+}
+.nav-item:hover::after{
+	transform: rotate(0deg);
+}
+.nav-item:hover{
+	background-color: white;
+}
+.nav-item:hover .drop-down-about a{
+	font-size: 16px;
+	background-color: grey;
+	width: 100%;
+	padding: 10px 0px;
+	color: white;
+	transform: rotate(0deg);
+}
+
+
+.drop-down-item a:hover{
+	opacity: 0.8;
+}
+
+
